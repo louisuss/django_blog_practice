@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bookmark',
     'taggit.apps.TaggitAppConfig',
     'taggit_templatetags2',
+    'photo',
 ]
 
 
@@ -126,7 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
-MEDEA_URL = '/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TAGGIT_CASE_INSENSITIVE = True
