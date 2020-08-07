@@ -18,6 +18,7 @@ from django.urls import path, include
 from blog_project.views import HomeView
 from django.conf.urls.static import static  # 정적 파일 처리 위해 그에 맞는 URL 패턴 반환
 from django.conf import settings
+from blog_project.views import UserCreateView, UserCreateDoneTV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,10 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('bookmark/', include('bookmark.urls')),
     path('photo/', include('photo.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/register/', UserCreateView.as_view(), name='register'),
+    path('accounts/register/done/',
+         UserCreateDoneTV.as_view(), name='register_done'),
     # MEDIA_URL 요청 오면 django.views.static.serve() 뷰 함수가 처리, 뷰 함수에 document_root 키워드 인자 전달
     # static.serve() 함수는 개발용 / httpd, nginx가 상용
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # static 함수가 반환하는 URL 패턴 추가
