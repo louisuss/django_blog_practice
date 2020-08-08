@@ -25,7 +25,7 @@ urlpatterns = [
     # /photo/photo/add/
     path('photo/add/', views.PhotoCV.as_view(), name='photo_add'),
     # /photo/photo/change/
-    path('photo/change/', views.PhotoUV.as_view(), name='photo_change'),
+    path('photo/change/', views.PhotoChangeLV.as_view(), name='photo_change'),
     # /photo/photo/99/update/
     path('photo/<int:pk>/update/', views.PhotoUV.as_view(), name='photo_update'),
     # /photo/photo/99/delete/
