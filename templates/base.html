@@ -33,6 +33,27 @@
         </li>
 
         <li class="nav-item dropdown mx-1 btn btn-primary">
+          <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Add</a>
+          <div class="dropdown-menu">
+            <a href="{% url 'bookmark:add' %}" class="dropdown-item">Bookmark</a>
+            <a href="{% url 'blog:add'%}" class="dropdown-item">Post</a>
+            <div class="dropdown-divider"></div>
+            <a href="" class="dropdown-item">Album</a>
+            <a href="" class="dropdown-item">Photo</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mx-1 btn btn-primary">
+          <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Change</a>
+          <div class="dropdown-menu">
+            <a href="{% url 'bookmark:change' %}" class="dropdown-item">Bookmark</a>
+            <a href="{% url 'blog:change'%}" class="dropdown-item">Post</a>
+            <div class="dropdown-divider"></div>
+            <a href="" class="dropdown-item">Album</a>
+            <a href="" class="dropdown-item">Photo</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown mx-1 btn btn-primary">
           <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
             Util
           </a>
@@ -46,7 +67,8 @@
       </ul>
       <form class="form-inline my-2 my-lg-0" action="post">
         {% csrf_token %}
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search_word" />
+        <input class=" form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+          name="search_word" />
       </form>
 
       <ul class="navbar-nav ml-5 mr-5">
