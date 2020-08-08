@@ -38,8 +38,8 @@
             <a href="{% url 'bookmark:add' %}" class="dropdown-item">Bookmark</a>
             <a href="{% url 'blog:add'%}" class="dropdown-item">Post</a>
             <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item">Album</a>
-            <a href="" class="dropdown-item">Photo</a>
+            <a href="{% url 'photo:album_add' %}" class="dropdown-item">Album</a>
+            <a href="{% url 'photo:photo_add' %}" class="dropdown-item">Photo</a>
           </div>
         </li>
 
@@ -49,8 +49,8 @@
             <a href="{% url 'bookmark:change' %}" class="dropdown-item">Bookmark</a>
             <a href="{% url 'blog:change'%}" class="dropdown-item">Post</a>
             <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item">Album</a>
-            <a href="" class="dropdown-item">Photo</a>
+            <a href="{% url 'photo:album_change%}" class="dropdown-item">Album</a>
+            <a href="{% url 'photo:photo_change%}" class="dropdown-item">Photo</a>
           </div>
         </li>
         <li class="nav-item dropdown mx-1 btn btn-primary">
