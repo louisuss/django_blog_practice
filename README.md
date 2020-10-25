@@ -1,1 +1,1 @@
-Django Web Programming 책 공부
+Django Web Programming
